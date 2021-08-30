@@ -368,14 +368,14 @@
     html {
         font-size: 45%;
     }
-    .main_row {
-        margin-top: 12vh;
-    }
+
     .bg1 {
         display: none;
     }
     .main_row {
         flex-direction: column-reverse;
+        margin-top: 12vh;
+        padding-top: 2vh;
     }
 
     .main_header_left {
