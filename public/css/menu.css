@@ -336,6 +336,9 @@ html {
         box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
         transition: 0.3s ease-in-out;
     }
+    .scroll__active.contain {
+        box-shadow: var(--button-active);
+    }
 
     .expend__list.navbar {
         width: 32rem;
@@ -348,7 +351,7 @@ html {
 
     .mobile__expend.contain {
         background-color: var(--bg-color);
-        box-shadow: var(--button-shadow);
+        box-shadow: var(--button-active);
     }
 
     .list {
