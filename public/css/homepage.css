@@ -19,6 +19,7 @@
     height: 100%;
     align-items: flex-end;
     position: relative;
+    margin-top: 8vh;
 }
 
 .main_header_left {
@@ -425,6 +426,13 @@
     }
     .social__links {
         margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .img__box {
+        max-width: 40rem;
+        max-height: 40rem;
     }
 }
 
