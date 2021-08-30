@@ -1,0 +1,125 @@
+/* === WELCOME SECTION === */
+
+/* ========= WELCOME DIV ========= */
+
+.welcome {
+    position: absolute;
+    background-color: var(--second-color);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+/* ====== BLINK DIV ====== */
+
+.blink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* === LOAD DIV === */
+
+.load {
+    width: 50px;
+    height: 50px;
+    border-top: 2px solid var(--bg-color);
+    border-bottom: 2px solid var(--bg-color);
+    border-radius: 50%;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* === END OF BLINK DIV === */
+
+/* === HEADING 1 === */
+
+.welcome1 {
+    position: absolute;
+    text-transform: uppercase;
+    left: 50%;
+    top: 30%;
+    font-size: 10rem;
+    transform: translateX(-50%);
+    color: var(--bg-color);
+}
+
+/* === HEADING 2 === */
+
+.welcome2 {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    color: var(--bg-color);
+}
+
+/* ========== IN WELCOMING WINDOW ALL SECTION NEEDED TO BE DISPLAY NONE ========== */
+
+.before {
+    display: none !important;
+}
+
+@media only screen and (max-width: 991px) {
+    .load {
+        width: 40px;
+        height: 40px;
+    }
+    .welcome1 {
+        font-size: 8rem;
+    }
+    .welcome2 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .welcome1 {
+        font-size: 7rem;
+    }
+    .welcome2 {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .welcome1 {
+        font-size: 5rem;
+    }
+    .welcome2 {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 376px) {
+    .welcome1 {
+        font-size: 4rem;
+    }
+    .welcome2 {
+        font-size: 12px;
+    }
+    .load {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 258px) {
+    .welcome1 {
+        font-size: 3rem;
+    }
+    .welcome2 {
+        font-size: 11px;
+    }
+    .load {
+        width: 26px;
+        height: 26px;
+    }
+}

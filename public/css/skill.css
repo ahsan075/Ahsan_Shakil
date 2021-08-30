@@ -1,0 +1,582 @@
+.skill_header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 5rem;
+    display: flex;
+    background-color: var(-bg-color);
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.skill_row {
+    padding: 5rem 5rem;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+    width: 100%;
+    align-items: flex-end;
+}
+.skill__title {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 7rem;
+}
+.width__max {
+    width: 100%;
+}
+
+.skill_header_left,
+.skill_header_right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 2rem;
+    position: relative;
+}
+.scrollspy__div {
+    width: 100%;
+}
+
+.scrollspy__div:nth-child(2) {
+    margin-top: 3rem;
+}
+
+.scrollspy__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.scrollspy__head_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.scrollspy__icon {
+    font-size: 2rem;
+}
+
+.scrollspy__heading,
+.scrollspy__subheading {
+    width: fit-content;
+    letter-spacing: 0.1rem;
+}
+.scrollspy__heading {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    font-family: var(--third-font);
+    font-weight: 700;
+}
+
+.scrollspy__subheading {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    font-family: var(--first-font);
+    font-weight: 500;
+}
+
+.scrollspy__head_right {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.scrollspy__div .hover_active.hover-in-shadow {
+    border-radius: 0;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+}
+
+.scrollspy__card {
+    /* background-color: #fff; */
+    width: 100%;
+    padding: 2rem;
+}
+.scrollspy__card.hover-in-shadow,
+.scrollspy__card.hover_active.hover-in-shadow {
+    border-radius: 0;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    color: var(--second-color);
+}
+
+.spy__1 .hover-in-shadow,
+.spy__1 .hover_active.hover-in-shadow {
+    color: #f7691b;
+}
+
+.spy__2 .hover-in-shadow,
+.spy__2 .hover_active.hover-in-shadow {
+    color: #71b156;
+}
+
+.spy__3 .hover-in-shadow,
+.spy__3 .hover_active.hover-in-shadow {
+    color: #001d34;
+}
+
+.spy__4 .hover-in-shadow,
+.spy__4 .hover_active.hover-in-shadow {
+    color: #1254b2;
+}
+
+.card_bar {
+    margin-top: 2rem;
+}
+
+.card__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    font-family: var(--second-font);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.progress {
+    background-color: rgba(181, 177, 177, 0.638);
+    width: 100%;
+    height: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.progress::before {
+    content: "";
+    position: absolute;
+    border-radius: 1rem;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.bar__active .p0::before {
+    width: 0%;
+    animation: p0 1s linear;
+}
+
+.bar__active .p5::before {
+    width: 5%;
+    animation: p5 1s linear;
+}
+
+.bar__active .p10::before {
+    width: 10%;
+    animation: p10 1s linear;
+}
+
+.bar__active .p15::before {
+    width: 15%;
+    animation: p15 1s linear;
+}
+
+.bar__active .p20::before {
+    width: 20%;
+    animation: p20 1s linear;
+}
+
+.bar__active .p25::before {
+    width: 25%;
+    animation: p25 1s linear;
+}
+
+.bar__active .p30::before {
+    width: 30%;
+    animation: p30 1s linear;
+}
+.bar__active .p35::before {
+    width: 35%;
+    animation: p35 1s linear;
+}
+.bar__active .p40::before {
+    width: 40%;
+    animation: p40 1s linear;
+}
+.bar__active .p45::before {
+    width: 45%;
+    animation: p45 1s linear;
+}
+.bar__active .p50::before {
+    width: 50%;
+    animation: p50 1s linear;
+}
+.bar__active .p55::before {
+    width: 55%;
+    animation: p55 1s linear;
+}
+
+.bar__active .p60::before {
+    width: 60%;
+    animation: p60 1s linear;
+}
+.bar__active .p65::before {
+    width: 65%;
+    animation: p65 1s linear;
+}
+.bar__active .p70::before {
+    width: 70%;
+    animation: p70 1s linear;
+}
+.bar__active .p75::before {
+    width: 75%;
+    animation: p75 1s linear;
+}
+.bar__active .p80::before {
+    width: 80%;
+    animation: p80 1s linear;
+}
+.bar__active .p85::before {
+    width: 85%;
+    animation: p85 1s linear;
+}
+.bar__active .p90::before {
+    width: 90%;
+    animation: p90 1s linear;
+}
+.bar__active .p95::before {
+    width: 95%;
+    animation: p95 1s linear;
+}
+.bar__active .p100::before {
+    width: 100%;
+    animation: p100 1s linear;
+}
+
+@keyframes p0 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes p5 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 5%;
+    }
+}
+@keyframes p10 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 10%;
+    }
+}
+@keyframes p15 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 15%;
+    }
+}
+@keyframes p20 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+@keyframes p25 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 25%;
+    }
+}
+
+@keyframes p30 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 30%;
+    }
+}
+@keyframes p35 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 35%;
+    }
+}
+
+@keyframes p40 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 40%;
+    }
+}
+@keyframes p45 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 45%;
+    }
+}
+@keyframes p50 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+@keyframes p55 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 55%;
+    }
+}
+@keyframes p60 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 60%;
+    }
+}
+@keyframes p65 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 65%;
+    }
+}
+@keyframes p70 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
+@keyframes p75 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 75%;
+    }
+}
+@keyframes p80 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;
+    }
+}
+@keyframes p85 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 85%;
+    }
+}
+@keyframes p90 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%;
+    }
+}
+@keyframes p95 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 95%;
+    }
+}
+@keyframes p100 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.html {
+    color: #e1872a;
+}
+.html .progress::before {
+    background-color: #e1872a;
+}
+
+.css {
+    color: #254bdd;
+}
+.css .progress::before {
+    background-color: #254bdd;
+}
+
+.js {
+    color: #cfb430;
+}
+.js .progress::before {
+    background-color: #cfb430;
+}
+
+.react {
+    color: #5ed3f3;
+}
+.react .progress::before {
+    background-color: #5ed3f3;
+}
+
+.jquery {
+    color: #0b131c;
+}
+.jquery .progress::before {
+    background-color: #0b131c;
+}
+
+.bootstrap {
+    color: #8814f5;
+}
+.bootstrap .progress::before {
+    background-color: #8814f5;
+}
+
+.node {
+    color: #87bf00;
+}
+.node .progress::before {
+    background-color: #87bf00;
+}
+
+.express {
+    color: #efd81d;
+}
+.express .progress::before {
+    background-color: #efd81d;
+}
+.php {
+    color: #7377ad;
+}
+.php .progress::before {
+    background-color: #7377ad;
+}
+.mongodb {
+    color: #0fa64d;
+}
+.mongodb .progress::before {
+    background-color: #0fa64d;
+}
+.mysql {
+    color: #005e86;
+}
+.mysql .progress::before {
+    background-color: #005e86;
+}
+.photoshop {
+    color: #001d34;
+}
+.photoshop .progress::before {
+    background-color: #001d34;
+}
+.adobexd {
+    color: #f75eee;
+}
+.adobexd .progress::before {
+    background-color: #f75eee;
+}
+.figma {
+    color: #0ac87e;
+}
+.figma .progress::before {
+    background-color: #0ac87e;
+}
+.ms {
+    color: #166eb3;
+}
+.ms .progress::before {
+    background-color: #166eb3;
+}
+.trello {
+    color: #095bd2;
+}
+.trello .progress::before {
+    background-color: #095bd2;
+}
+.arduino {
+    color: #00838b;
+}
+.arduino .progress::before {
+    background-color: #00838b;
+}
+
+.card__off {
+    display: none;
+}
+
+@media only screen and (min-width: 1101px) {
+    .scrollspy__div {
+        width: 47rem;
+    }
+    .skill_row {
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .skill_header {
+        padding: 2rem 2rem;
+    }
+    .skill_row {
+        padding: 0;
+    }
+    .skill_header_left,
+    .skill_header_right {
+        padding: 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .skill_row {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+    .skill_header_left,
+    .skill_header_right {
+        width: 100%;
+        padding: 3rem;
+        height: fit-content;
+    }
+}
