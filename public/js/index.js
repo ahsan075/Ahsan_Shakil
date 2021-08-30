@@ -83,10 +83,12 @@ window.onscroll = () => {
     let top = window.scrollY;
 
     section.forEach((section) => {
-        console.log(section.getAttribute("id"));
         let offset = section.offsetTop - 150;
         let height = section.offsetHeight;
         let currentId = section.getAttribute("id");
+
+        console.log(currentId);
+        console.log(top + " " + offset + " " + height);
 
         if (top >= offset && top < offset + height) {
             listItem.forEach((li) => li.classList.remove("active"));
@@ -95,22 +97,19 @@ window.onscroll = () => {
                 .querySelector(selector)
                 .parentElement.classList.add("active");
         }
-        if (
-            section.getAttribute("id") === "skill" &&
-            top >= offset &&
-            top < offset + height
-        ) {
+        if (top >= 1.6 * height) {
             scrollspy__div.forEach((list) => {
                 if (list.classList.contains("hover_active") === true) {
-                    console.log("yes");
                     list.parentElement.classList.add("bar__active");
                 }
             });
+
+            console.log("done");
         } else if (top < offset - 150) {
-            console.log("both");
             scrollspy__div.forEach((list) => {
                 list.parentElement.classList.remove("bar__active");
             });
+            console.log("not");
         }
     });
 };
