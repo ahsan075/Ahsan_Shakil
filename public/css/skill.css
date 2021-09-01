@@ -45,7 +45,9 @@
 .scrollspy__div {
     width: 100%;
 }
-
+.desktop-hide {
+    display: none;
+}
 .scrollspy__div:nth-child(2) {
     margin-top: 3rem;
 }
@@ -568,6 +570,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .skill_header {
+        height: fit-content;
+    }
     .skill_row {
         flex-direction: column;
         justify-content: center;
@@ -578,5 +583,16 @@
         width: 100%;
         padding: 3rem;
         height: fit-content;
+    }
+    .mb-hide {
+        display: none;
+    }
+    .desktop-hide {
+        display: flex;
+    }
+
+    .scrollspy__div:nth-child(3),
+    .scrollspy__div:nth-child(4) {
+        margin-top: 3rem;
     }
 }
