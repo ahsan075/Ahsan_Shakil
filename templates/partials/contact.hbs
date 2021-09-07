@@ -1,0 +1,118 @@
+<section class="contact_header second_outer_shadow" id="contact">
+
+    <div class="width__max">
+        <div class="contacts__title">
+            <h1 class="about__heading">Contact</h1>
+            <p class="about_subhead">Get in touch</p>
+        </div>
+
+        <div class="msg__div">
+            <p class="success__msg"></p>
+        </div>
+
+        <div class="contact_row mx-auto">
+
+            {{! Main Header Left }}
+
+            <div class="contact_header_left">
+
+                <div class="contact__div">
+
+                    <div class="address">
+                        <div class="address__icon"><i
+                                class="fas fa-mobile"
+                            ></i></div>
+                        <div class="address__body">
+                            <div class="address__header">phone</div>
+                            <div class="address__link">01307373484</div>
+                        </div>
+                    </div>
+
+                    <div class="address">
+                        <div class="address__icon"><i
+                                class="fas fa-at"
+                            ></i></div>
+                        <div class="address__body">
+                            <div class="address__header">email</div>
+                            <div
+                                class="address__link"
+                            >shakilahsan45@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="address">
+                        <div class="address__icon"><i
+                                class="fab fa-facebook-messenger"
+                            ></i></div>
+                        <div class="address__body">
+                            <div class="address__header">facebook</div>
+                            <div class="address__link"><a href="">Ahsan shakil</a></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            {{! Main Header Right }}
+
+            <div class="contact_header_right">
+                <div class="contact__form">
+                    <h1 class="contacts__heading">Comment</h1>
+
+                    <form class="form" action="" id="reg-form">
+                        <div class="inputBox">
+                            <input
+                                type="text"
+                                name="name"
+                                {{! placeholder="Full Name" }}
+                                id="name"
+                                required="required"
+                                autocomplete="off"
+                            />
+                            <span>Full Name</span>
+                            <div class="name__message"></div>
+                        </div>
+
+                        <div class="inputBox">
+                            <input
+                                type="text"
+                                name="email"
+                                id="email"
+                                required="required"
+                                autocomplete="off"
+                                {{! placeholder="Email" }}
+                            />
+                            <span>Email</span>
+                            <div class="email__message"></div>
+                        </div>
+
+                        <div class="inputBox">
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows="2"
+                                required="required"
+                                {{! placeholder="Type your Message.." }}
+                            ></textarea>
+                            <span>Type your Message..</span>
+                        </div>
+
+                        <button
+                            class="contacts__btn"
+                            type="submit"
+                        >Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="comment__main">
+            <h1 class="comment__heading">Comments</h1>
+            <div class="comments"></div>
+
+        </div>
+
+    </div>
+</section>

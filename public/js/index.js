@@ -79,16 +79,20 @@ about_list.forEach((list) => {
     });
 });
 
+const progressbar = document.getElementById("progressbar");
+
+let totalHeight = document.body.scrollHeight - window.innerHeight / 1.2;
+
 window.onscroll = () => {
+    let progressHeight = (window.pageYOffset / totalHeight) * 100;
+    progressbar.style.height = progressHeight + "%";
+
     let top = window.scrollY;
 
     section.forEach((section) => {
         let offset = section.offsetTop - 150;
         let height = section.offsetHeight;
         let currentId = section.getAttribute("id");
-
-        console.log(currentId);
-        console.log(top + " " + offset + " " + height);
 
         if (top >= offset && top < offset + height) {
             listItem.forEach((li) => li.classList.remove("active"));
@@ -103,13 +107,10 @@ window.onscroll = () => {
                     list.parentElement.classList.add("bar__active");
                 }
             });
-
-            console.log("done");
         } else if (top < offset - 150) {
             scrollspy__div.forEach((list) => {
                 list.parentElement.classList.remove("bar__active");
             });
-            console.log("not");
         }
     });
 };

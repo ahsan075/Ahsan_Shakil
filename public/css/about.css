@@ -312,3 +312,14 @@
         justify-content: center;
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .about__heading {
+        letter-spacing: 0.2rem;
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    .about_subhead {
+        font-size: 1.2rem;
+    }
+}

@@ -47,6 +47,74 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0.3rem;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0.3rem;
+    /* background: linear-gradient(to top, #008aff, #00ffe7); */
+    background: linear-gradient(
+        to top,
+        var(--first-color),
+        var(--second-color)
+    );
+    animation: scrollbar 5s linear infinite;
+    z-index: 100;
+}
+@keyframes scrollbar {
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to top, #008aff, #00ffe7); */
+    background: linear-gradient(
+        to top,
+        var(--first-color),
+        var(--second-color)
+    );
+    filter: blur(0.3rem);
+}
+
+#progressbar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to top, #008aff, #00ffe7); */
+    background: linear-gradient(
+        to top,
+        var(--first-color),
+        var(--second-color)
+    );
+    filter: blur(3rem);
+}
+
 .inner_shadow {
     box-shadow: var(--inner-shadow);
 }
@@ -81,6 +149,11 @@ html {
     transition: 0.3s ease-in-out;
 }
 
+.yes.scroll__active.contain {
+    box-shadow: none;
+    background-color: transparent;
+}
+
 .scroll__active.contain {
     box-shadow: var(--button-shadow);
     background-color: var(--bg-color);
@@ -93,6 +166,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .circle__name {
@@ -335,6 +410,7 @@ html {
         padding: 0 0.5rem;
         box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
         transition: 0.3s ease-in-out;
+        overflow: hidden;
     }
     .scroll__active.contain {
         box-shadow: var(--button-active);
@@ -412,9 +488,12 @@ html {
     .list li a {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        /* justify-content: space-around; */
+        justify-content: space-between;
         align-items: center;
         padding: 0;
+        width: 28rem;
+        transition: 0.3s ease-in-out;
     }
     .list li a .icon {
         width: fit-content;
@@ -423,6 +502,7 @@ html {
         justify-content: center;
         align-items: center;
         margin: 0;
+        padding: 0 2.5rem;
     }
 
     .list li a .icon .fas {
@@ -438,9 +518,10 @@ html {
 
     .list li a .name {
         width: fit-content;
-        display: none;
+        /* display: none; */
         height: 100%;
         margin: 0;
+        padding: 0 2.5rem;
     }
 
     .list li a .active.name {
