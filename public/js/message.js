@@ -66,7 +66,7 @@ function reset() {
 
 setInterval(() => {
     success__msg.innerHTML = "";
-}, 4000);
+}, 5000);
 
 async function showMessage() {
     const result = await fetch("/api", {
@@ -129,15 +129,19 @@ function Template(allData) {
 
         return ` <div class="comment__div">
         <div class="comment__body">
+        <div class="comment_left">
             <div class="comment__img"><i class="fas fa-user"></i></div>
+            <div class="comment__time"> 
             <div class="comment__name">${item.name}</div>
+            <div class="time__delay">${newTimeDiff} ${timeName} ago</div>
+            </div>   
+        </div>
+        <div class="comment_right"><i class="fas fa-ellipsis-v"></i></div>
         </div>
         <div class="comment__msg">
            ${item.message}
         </div>
-        <div class="comment__time"> 
-        <div class="time__delay">${newTimeDiff} ${timeName} ago</div>
-        </div>
+       
         </div> `;
     });
     template = template.join("");

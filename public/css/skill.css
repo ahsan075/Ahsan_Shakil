@@ -27,6 +27,22 @@
     align-items: center;
     margin-top: 7rem;
 }
+
+.skill__heading {
+    font-family: var(--second-font);
+    letter-spacing: 0.3rem;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--skill-color);
+}
+.skill_subhead {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: var(--second-font);
+    letter-spacing: 0.2rem;
+    margin-top: 1rem;
+    color: var(--skill-sub-color);
+}
 .width__max {
     width: 100%;
 }
@@ -101,21 +117,24 @@
 
 .scrollspy__div .hover_active.hover-in-shadow {
     border-radius: 0;
-    border-top-left-radius: 4rem;
-    border-top-right-radius: 4rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    box-shadow: var(--scrollspy-shadow);
 }
 
 .scrollspy__card {
-    /* background-color: #fff; */
     width: 100%;
     padding: 2rem;
+}
+.scrollspy__head.hover-in-shadow {
+    border-radius: 2rem;
 }
 .scrollspy__card.hover-in-shadow,
 .scrollspy__card.hover_active.hover-in-shadow {
     border-radius: 0;
-    border-bottom-left-radius: 4rem;
-    border-bottom-right-radius: 4rem;
-    color: var(--second-color);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: var(--scrollspy-shadow);
 }
 
 .spy__1 .hover-in-shadow,
@@ -130,12 +149,12 @@
 
 .spy__3 .hover-in-shadow,
 .spy__3 .hover_active.hover-in-shadow {
-    color: #001d34;
+    color: var(--design-color);
 }
 
 .spy__4 .hover-in-shadow,
 .spy__4 .hover_active.hover-in-shadow {
-    color: #1254b2;
+    color: var(--tools-color);
 }
 
 .card_bar {
@@ -153,7 +172,8 @@
 }
 
 .progress {
-    background-color: rgba(181, 177, 177, 0.638);
+    /* background-color: rgba(181, 177, 177, 0.638); */
+    background-color: var(--scrollspy-div-inner);
     width: 100%;
     height: 1rem;
     margin-top: 1.5rem;
@@ -463,10 +483,10 @@
 }
 
 .jquery {
-    color: #0b131c;
+    color: var(--jquery-color);
 }
 .jquery .progress::before {
-    background-color: #0b131c;
+    background-color: var(--jquery-color);
 }
 
 .bootstrap {
@@ -508,10 +528,10 @@
     background-color: #005e86;
 }
 .photoshop {
-    color: #001d34;
+    color: var(--photoshop-color);
 }
 .photoshop .progress::before {
-    background-color: #001d34;
+    background-color: var(--photoshop-color);
 }
 .adobexd {
     color: #f75eee;

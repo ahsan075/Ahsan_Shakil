@@ -4,7 +4,7 @@
 
 .welcome {
     position: absolute;
-    background-color: var(--second-color);
+    background-color: var(--welcome-color);
     width: 100%;
     height: 100vh;
     z-index: -1;
@@ -28,8 +28,8 @@
 .load {
     width: 50px;
     height: 50px;
-    border-top: 2px solid var(--bg-color);
-    border-bottom: 2px solid var(--bg-color);
+    border-top: 2px solid var(--loader-color);
+    border-bottom: 2px solid var(--loader-color);
     border-radius: 50%;
     animation: animate 3s linear infinite;
 }
@@ -50,7 +50,7 @@
     top: 30%;
     font-size: 10rem;
     transform: translateX(-50%);
-    color: var(--bg-color);
+    color: var(--loader-color);
 }
 
 /* === HEADING 2 === */
@@ -60,7 +60,7 @@
     left: 50%;
     top: 60%;
     transform: translateX(-50%);
-    color: var(--bg-color);
+    color: var(--loader-color);
 }
 
 /* ========== IN WELCOMING WINDOW ALL SECTION NEEDED TO BE DISPLAY NONE ========== */

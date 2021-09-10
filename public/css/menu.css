@@ -12,8 +12,19 @@
 :root {
     --first-color: #878a8f;
     --second-color: #0f141e;
-    --bg-color: #eff0f4;
+    --about-bg: #f2f3f7;
     --new-bg: linear-gradient(to bottom, #eff0f4, #fff);
+    --first-font: "Fira Sans", sans-serif;
+    --second-font: "Azeret Mono", monospace;
+    --third-font: "Roboto", sans-serif;
+    --welcome-color: #0f141e;
+    --loader-color: #fff;
+    --logo--before-color: #fff;
+    --list-content-color: #0f141e;
+    --list-color: #141f43;
+
+    --bg-color: #eff0f4;
+    --text-color: #141f43;
     --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
     --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
     --button-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
@@ -24,16 +35,64 @@
         inset -2px -2px 12px rgba(255, 255, 255, 0.5),
         inset 2px 2px 4px rgba(255, 255, 255, 0.1),
         inset 2px 2px 8px rgba(0, 0, 0, 0.15);
-    --black-button-active: inset -2px -2px 8px rgb(77, 73, 73),
-        inset -2px -2px 12px rgba(106, 103, 103, 0.5),
-        inset 2px 2px 4px rgba(0, 0, 0, 0.1),
-        inset 2px 2px 8px rgba(41, 39, 39, 0.15);
+    --logo-color: #0f141e;
+    --list-bg-color: #f2f3f7;
+    --home-anchr-color: #fff;
+    --home-anchr-hover-color: #141f43;
+    --common-color: #878a8f;
+    --toggole-color: #141f43;
+    --about-color: #141f43;
+    --about-sub-color: #878a8f;
+    --fd-color: #141f43;
+    --skill-color: var(--about-color);
+    --skill-sub-color: var(--about-sub-color);
+    --scrollspy-div-inner: rgb(201, 198, 198);
+    --scrollspy-shadow: var(--button-active);
+    --design-color: #001d34;
+    --tools-color: #1254b2;
+    --jquery-color: #0b131c;
+    --photoshop-color: #001d34;
+}
+
+/* --bg-color: #091921; */
+
+/* :root {
+
+
+    --bg-color: #0f141e;
+    --text-color: #fff;
+    --outer-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+        2px 2px 6px rgba(0, 0, 0, 0.8);
+    --inner-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+        inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+    --button-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+        2px 2px 6px rgba(0, 0, 0, 0.8);
+    --button-active: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+        inset 2px 2px 6px rgba(0, 0, 0, 0.1);
     --first-font: "Fira Sans", sans-serif;
     --second-font: "Azeret Mono", monospace;
     --third-font: "Roboto", sans-serif;
-    --text-color: #141f43;
-    --about-bg: #f2f3f7;
-}
+
+    --logo-color: #fff;
+    --list-bg-color: #f2f3f7;
+
+    --home-anchr-color: #141f43;
+    --home-anchr-hover-color: #04aa6d;
+    --common-color: rgb(209, 203, 203);
+    --toggole-color: #fff;
+    --about-color: #0f141e;
+    --fd-color: #0f141e;
+    --skill-color: #fff;
+    --skill-sub-color: rgb(213, 205, 205);
+    --scrollspy-div-inner: rgb(211, 208, 208);
+    --scrollspy-shadow: var(--button-shadow);
+    --design-color: #0084f0;
+    --tools-color: #226eda;
+    --jquery-color: #475e79;
+    --photoshop-color: #035faa;
+} */
+/* --about-color: #091921; */
+/* --fd-color: #091921; */
 
 body {
     background-color: var(--bg-color);
@@ -51,19 +110,26 @@ html {
     width: 0;
 }
 
+.none #scrollPath,
+.none #progressbar {
+    display: none;
+}
+
 #scrollPath {
     position: fixed;
     top: 0;
     right: 0;
-    width: 0.3rem;
+    width: 0.5rem;
     height: 100%;
     background: rgba(255, 255, 255, 0.05);
+    border-radius: 30%;
 }
 #progressbar {
     position: fixed;
     top: 0;
     right: 0;
-    width: 0.3rem;
+    width: 0.5rem;
+    border-radius: 30%;
     /* background: linear-gradient(to top, #008aff, #00ffe7); */
     background: linear-gradient(
         to top,
@@ -96,7 +162,7 @@ html {
         var(--first-color),
         var(--second-color)
     );
-    filter: blur(0.3rem);
+    filter: blur(0.5rem);
 }
 
 #progressbar::after {
@@ -172,12 +238,12 @@ html {
 
 .circle__name {
     font-size: 3rem;
-    border: 3px solid var(--text-color);
+    border: 3px solid var(--logo-color);
     padding: 0rem 0.72rem;
     border-radius: 50%;
     font-family: var(--second-font);
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--logo-color);
     margin-right: 1rem;
 }
 .main__name {
@@ -193,7 +259,7 @@ html {
     letter-spacing: 0.2rem;
     word-spacing: 0.1rem;
     text-transform: uppercase;
-    color: var(--text-color);
+    color: var(--logo-color);
 }
 .pro__name {
     font-size: 1rem;
@@ -202,19 +268,19 @@ html {
     letter-spacing: 0.8rem;
     word-spacing: 0.35rem;
     text-transform: uppercase;
-    color: var(--text-color);
+    color: var(--logo-color);
 }
 
 .no .circle__name {
-    border: 3px solid var(--bg-color);
-    color: var(--bg-color);
+    border: 3px solid var(--logo--before-color);
+    color: var(--logo--before-color);
 }
 
 .no .name__title {
-    color: var(--bg-color);
+    color: var(--logo--before-color);
 }
 .no .pro__name {
-    color: var(--bg-color);
+    color: var(--logo--before-color);
 }
 /* Navbar */
 
@@ -225,7 +291,7 @@ html {
 .list {
     position: relative;
     padding: 1rem 0;
-    background: #f2f3f7;
+    background: var(--list-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,14 +337,14 @@ html {
     line-height: 3rem;
     font-size: 2rem;
     transition: 0.5s;
-    color: var(--text-color);
+    color: var(--list-color);
 }
 /* .list li a .icon .fas:last-child {
     color: #e91e63;
 } */
 .list li a:hover .icon .fas:last-child {
     color: #fff;
-    background-color: var(--second-color);
+    background-color: var(--list-content-color);
     border-radius: 1rem;
 }
 
@@ -300,7 +366,7 @@ html {
 .list li a .name span {
     display: block;
     position: relative;
-    color: var(--text-color);
+    color: var(--list-color);
     font-family: var(--second-font);
     font-weight: 600;
     font-size: 1.1rem;
@@ -315,7 +381,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    color: var(--second-color);
+    color: var(--list-content-color);
 }
 
 .list li a:hover .name span {
@@ -335,7 +401,7 @@ html {
     }
     .list li.active a .icon .fas:last-child {
         color: #fff;
-        background-color: var(--second-color);
+        background-color: var(--list-content-color);
         border-radius: 1rem;
     }
     .list li.active a .icon .fas {
@@ -408,16 +474,23 @@ html {
         left: -100%;
         top: 100%;
         padding: 0 0.5rem;
-        box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+        box-shadow: var(--inner-shadow);
         transition: 0.3s ease-in-out;
         overflow: hidden;
+    }
+
+    .black .navbar {
+        box-shadow: var(--outer-shadow);
     }
     .scroll__active.contain {
         box-shadow: var(--button-active);
     }
+    .black .scroll__active.contain {
+        box-shadow: var(--outer-shadow);
+    }
 
     .expend__list.navbar {
-        width: 32rem;
+        width: 27rem;
         padding: 0 1rem;
     }
 
@@ -428,6 +501,9 @@ html {
     .mobile__expend.contain {
         background-color: var(--bg-color);
         box-shadow: var(--button-active);
+    }
+    .black .mobile__expend.contain {
+        box-shadow: var(--outer-shadow);
     }
 
     .list {
@@ -444,6 +520,7 @@ html {
     .expend__nav {
         display: flex;
         height: 20%;
+        color: var(--toggole-color);
         justify-content: center;
         align-items: center;
         font-size: 2.25rem;
@@ -454,10 +531,7 @@ html {
         align-items: center;
         padding: 0.75rem 1.3rem;
         border-radius: 50%;
-        box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-            -2px -2px 12px rgba(255, 255, 255, 0.5),
-            inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-            2px 2px 8px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--outer-shadow);
         transition: 0.3s ease-in-out;
     }
 
@@ -469,10 +543,7 @@ html {
         /* border-right: 0; */
         width: 100%;
         /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
-        box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-            -2px -2px 12px rgba(255, 255, 255, 0.5),
-            inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-            2px 2px 8px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--button-active);
         padding: 1rem 0;
         border-radius: 2rem;
     }
@@ -492,7 +563,7 @@ html {
         justify-content: space-between;
         align-items: center;
         padding: 0;
-        width: 28rem;
+        width: 23rem;
         transition: 0.3s ease-in-out;
     }
     .list li a .icon {
@@ -555,6 +626,7 @@ html {
         height: 4.5rem;
         width: 4.5rem;
         display: flex;
+        color: var(--toggole-color);
         justify-content: center;
         align-items: center;
         border-radius: 50%;
