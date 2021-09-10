@@ -528,10 +528,13 @@ textarea {
     }
 }
 @media only screen and (max-width: 376px) {
+    .contact_header {
+        padding: 3rem 2rem;
+    }
     .comment__div {
-        width: 95%;
+        width: 100%;
     }
     .contact_row {
-        padding: 3rem 2rem;
+        padding: 3rem 1rem;
     }
 }

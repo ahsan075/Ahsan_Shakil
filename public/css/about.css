@@ -347,3 +347,16 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .details__card {
+        width: 65%;
+        height: 25rem;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .details__card {
+        width: 80%;
+    }
+}
