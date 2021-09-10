@@ -341,6 +341,10 @@ textarea {
     border-radius: 2rem;
     padding: 2rem 0;
     margin-top: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
 }
 .comment__heading {
     font-size: 3rem;
@@ -355,15 +359,22 @@ textarea {
 .white .comment__heading {
     color: #084799;
 }
-
-.comments {
+.comments_-scrolling {
     max-height: 40rem;
+    width: 100%;
     overflow-x: hidden;
+    margin: auto;
+}
+.comments {
     padding: 1rem 2rem;
     border-radius: 1rem;
     font-weight: 700;
     width: 60%;
     margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
 .comment__div {
@@ -373,25 +384,24 @@ textarea {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin: auto;
+    /* margin: auto; */
     margin-bottom: 1.5rem;
+    /* margin: 1rem 2rem; */
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
 }
-
+.comment__div:first-child {
+    margin-bottom: 0;
+}
+.comment__div:last-child {
+    margin-top: 0;
+}
 .black .comment__div {
     background-color: rgba(255, 255, 255, 0.74);
 }
 
 .white .comment__div {
     background-color: #649eeb;
-}
-
-.comment__div:last-child {
-    margin-bottom: 0;
-}
-.comment__div:first-child {
-    margin-top: 1.5rem;
 }
 
 .comment__body {
@@ -536,5 +546,8 @@ textarea {
     }
     .contact_row {
         padding: 3rem 1rem;
+    }
+    .comments {
+        padding: 1rem;
     }
 }

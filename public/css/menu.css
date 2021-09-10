@@ -482,6 +482,9 @@ html {
     .black .navbar {
         box-shadow: var(--outer-shadow);
     }
+    .black .list {
+        background-color: #fff;
+    }
     .scroll__active.contain {
         box-shadow: var(--button-active);
     }
@@ -540,12 +543,17 @@ html {
         box-shadow: var(--button-active);
     }
     .list li {
-        /* border-right: 0; */
         width: 100%;
-        /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
-        box-shadow: var(--button-active);
-        padding: 1rem 0;
+        padding: 1.5rem 0;
         border-radius: 2rem;
+    }
+
+    .white .list li {
+        box-shadow: var(--button-active);
+    }
+    .black .list li {
+        box-shadow: none;
+        background-color: #0f141e;
     }
 
     .list li.active {
@@ -559,7 +567,6 @@ html {
     .list li a {
         display: flex;
         flex-direction: row;
-        /* justify-content: space-around; */
         justify-content: space-between;
         align-items: center;
         padding: 0;
@@ -574,6 +581,11 @@ html {
         align-items: center;
         margin: 0;
         padding: 0 2.5rem;
+    }
+
+    .black .list li a .icon .fas,
+    .black .list li a .name span {
+        color: #fff;
     }
 
     .list li a .icon .fas {
@@ -602,8 +614,11 @@ html {
     }
 
     .list li a .name span {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        font-family: var(--second-font);
         padding: 0.1rem 0.2rem;
+        font-weight: 800;
     }
     .list li a .name span::before {
         content: "";
