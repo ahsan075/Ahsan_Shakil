@@ -394,7 +394,6 @@ html {
     border: none;
 }
 .normal .list li:last-child {
-    display: none;
 }
 
 .list li a {
@@ -473,6 +472,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--third-font);
 }
 
 .black .list li a .name span::before,
@@ -546,7 +546,8 @@ html {
     .normal .list li a .name span {
         font-size: 1.3rem;
         text-transform: uppercase;
-        font-weight: 800;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
     }
 }
 
@@ -651,6 +652,9 @@ html {
         box-shadow: 0 -0.1rem 0.4rem rgba(0, 0, 0, 0.15);
         border-radius: 3rem 3rem 0 0;
         transition: 0.3s;
+    }
+    .normal .navbar {
+        background-color: #f9f9ff;
     }
     .normal .scroll__active.contain {
         background-color: #f9f9ff;
