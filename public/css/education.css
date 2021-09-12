@@ -11,6 +11,12 @@
     transition: 0.5s ease-in-out;
 }
 
+.normal .education_header {
+    border-radius: 0;
+    background-color: #f9f9ff;
+    box-shadow: none;
+}
+
 /* White Section  End*/
 
 /* Black Section */
@@ -44,6 +50,9 @@
 .white .education__card {
     box-shadow: var(--button-shadow);
 }
+.normal .education__card {
+    background-color: var(--normal-edu-card);
+}
 
 .education__year {
     font-size: 1.6rem;
@@ -55,6 +64,9 @@
 }
 .white .education__year {
     color: var(--text-color);
+}
+.normal .education__year {
+    color: #fff;
 }
 .education__year i {
     margin-right: 1rem;
@@ -70,7 +82,8 @@
     padding: 1rem;
     letter-spacing: 0.2rem;
 }
-
+.normal .education__header,
+.normal .edu_body,
 .black .education__header,
 .black .edu_body {
     color: #fff;

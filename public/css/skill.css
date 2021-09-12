@@ -1,7 +1,8 @@
 .skill_header {
     position: relative;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: fit-content;
     padding: 2rem 5rem;
     display: flex;
     background-color: var(-bg-color);
@@ -9,18 +10,20 @@
     align-items: center;
     transition: 0.5s ease-in-out;
 }
+.normal .skill_header {
+    background-color: #f9f9ff;
+}
 
 .skill_row {
-    padding: 5rem 5rem;
+    padding: 5rem;
     margin-top: 8rem;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: space-around;
-    height: 80%;
     width: 100%;
-    align-items: flex-start;
+    align-items: center;
 }
 .skill__title {
-    height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -34,6 +37,9 @@
     font-size: 5rem;
     font-weight: 900;
     color: var(--skill-color);
+}
+.normal .skill__heading {
+    color: #0f141e;
 }
 .skill_subhead {
     text-align: center;
@@ -122,6 +128,11 @@
     box-shadow: var(--scrollspy-shadow);
 }
 
+.normal .scrollspy__div .hover_active.hover-in-shadow {
+    box-shadow: none;
+    border-radius: 0;
+}
+
 .scrollspy__card {
     width: 100%;
     padding: 2rem;
@@ -129,12 +140,27 @@
 .scrollspy__head.hover-in-shadow {
     border-radius: 2rem;
 }
+
+.normal .scrollspy__head.hover-in-shadow {
+    border-radius: 0;
+}
+
 .scrollspy__card.hover-in-shadow,
 .scrollspy__card.hover_active.hover-in-shadow {
     border-radius: 0;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     box-shadow: var(--scrollspy-shadow);
+}
+
+.normal .scrollspy__card.hover-in-shadow,
+.normal .scrollspy__card.hover_active.hover-in-shadow {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.normal .hover-in-shadow {
+    box-shadow: none;
 }
 
 .spy__1 .hover-in-shadow,
@@ -157,6 +183,21 @@
     color: var(--tools-color);
 }
 
+.normal .spy__1 .hover-in-shadow,
+.normal .spy__1 .hover_active.hover-in-shadow,
+.normal .spy__2 .hover-in-shadow,
+.normal .spy__2 .hover_active.hover-in-shadow,
+.normal .spy__3 .hover-in-shadow,
+.normal .spy__3 .hover_active.hover-in-shadow,
+.normal .spy__4 .hover-in-shadow,
+.normal .spy__4 .hover_active.hover-in-shadow {
+    color: var(--second-color);
+}
+
+.normal .scrollspy__icon,
+.normal .scrollspy__head_right {
+    color: var(--normal-common-color);
+}
 .card_bar {
     margin-top: 2rem;
 }
@@ -179,6 +220,10 @@
     margin-top: 1.5rem;
     border-radius: 1rem;
     position: relative;
+}
+
+.normal .progress {
+    height: 0.7rem;
 }
 
 .progress::before {
@@ -562,6 +607,14 @@
 }
 .arduino .progress::before {
     background-color: #00838b;
+}
+
+.normal .details__name,
+.normal .details__percent {
+    color: var(--second-color);
+}
+.normal .progress::before {
+    background-color: var(--normal-common-color);
 }
 
 .card__off {

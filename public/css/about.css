@@ -10,17 +10,20 @@
     background-color: var(--about-bg);
     border-radius: 10rem;
 }
+.normal .about_header {
+    background-color: #fff;
+    border-radius: 0;
+}
 
 .about_row {
     padding: 5rem 5rem;
     display: flex;
+    margin-top: 8rem;
     justify-content: space-around;
-    height: 85%;
     width: 100%;
     align-items: center;
 }
 .about__title {
-    height: 15%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -34,6 +37,9 @@
     font-size: 5rem;
     font-weight: 900;
     color: var(--about-color);
+}
+.normal .about__heading {
+    color: #0f141e;
 }
 .about_subhead {
     text-align: center;
@@ -103,6 +109,9 @@
 .black .main__about__head {
     color: #184d68;
 }
+.normal .main__about__head {
+    color: #0f141e;
+}
 .right_heading {
     display: flex;
     justify-content: flex-start;
@@ -162,6 +171,15 @@
 .white .projects a:hover {
     box-shadow: var(--button-active);
 }
+.normal .projects a {
+    color: #fff;
+    background-color: var(--normal-common-color);
+    padding: 2rem;
+    font-weight: 500;
+}
+.normal .projects a:hover {
+    background-color: var(--normal-second-color);
+}
 
 .black .projects a {
     background-color: #184d68;
@@ -198,6 +216,16 @@
 }
 .white .links__tag:hover i {
     color: #1e1e1e;
+}
+.normal .links__tag {
+    background-color: none;
+}
+.normal .links__tag i {
+    color: var(--normal-common-color);
+    transition: 0.2s ease-in-out;
+}
+.normal .links__tag :hover i {
+    color: var(--normal-second-color);
 }
 
 .black .links__tag {
@@ -237,6 +265,10 @@
 .black .details__card {
     background-color: #184d68;
 }
+.normal .details__card {
+    background-color: var(--normal-detail-card);
+    border-radius: 0.5rem;
+}
 .details__card:last-child {
     margin-bottom: 0;
 }
@@ -251,6 +283,10 @@
 .black .detail__icon {
     color: var(--about-bg);
 }
+.normal .detail__icon,
+.normal .details__title {
+    color: #fff;
+}
 .details__number {
     font-size: 3rem;
     background-color: var(--about-bg);
@@ -262,14 +298,19 @@
     border-radius: 50%;
     font-family: var(--second-font);
     font-weight: 700;
+    pointer-events: none;
 }
 .black .details__number {
     color: #184d68;
+}
+.normal .details__number {
+    color: var(--normal-edu-card);
 }
 .details__title {
     font-size: 1.5rem;
     font-family: var(--second-font);
     font-weight: 600;
+    pointer-events: none;
 }
 .white .details__title {
 }

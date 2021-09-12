@@ -10,6 +10,9 @@
     transition: 0.5s ease-in-out;
     position: relative;
 }
+.normal .project_header {
+    background-color: #fff;
+}
 
 .project_header_left {
     height: 100%;
@@ -33,8 +36,8 @@
 /* Blcak */
 
 .slider__card {
-    width: 30rem;
-    height: 35rem;
+    width: 27rem;
+    height: 30rem;
     display: flex;
     padding: 2rem 2rem;
     margin: 2rem 2rem;
@@ -52,6 +55,11 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(0.5rem);
+}
+.normal .slider__card {
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.15),
+        -0.1rem -0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+    background-color: #fff;
 }
 .white .slider__card {
     box-shadow: var(--button-shadow);
@@ -72,6 +80,9 @@
 .black .card_number {
     color: rgba(255, 255, 255, 0.05);
 }
+.normal .card_number {
+    color: rgba(0, 0, 0, 0.075);
+}
 .white .card_number {
     text-shadow: var(--outer-shadow);
     color: var(--bg-color);
@@ -91,6 +102,9 @@
 }
 .white .card_number_name {
     color: var(--text-color);
+}
+.normal .card_number_name {
+    color: var(--normal-second-color);
 }
 .slider__head {
     display: flex;
@@ -126,6 +140,10 @@
     background: #fff;
     box-shadow: 0 0.5rem 1.5rem rgba(131, 21, 21, 0.2);
 }
+.normal .slider__btn {
+    color: #fff;
+    background: var(--normal-common-color);
+}
 .white .slider__btn {
     color: var(--text-color);
     box-shadow: var(--button-shadow);
@@ -142,7 +160,11 @@
 .white .topUp .card_number,
 .white .topUp .card_number_name,
 .white .topUp .slider__head,
-.white .topUp .slider__btn {
+.white .topUp .slider__btn,
+.normal .topUp .card_number,
+.normal .topUp .card_number_name,
+.normal .topUp .slider__head,
+.normal .topUp .slider__btn {
     transform: translateY(6rem);
     transition: 0.3s ease-in-out;
 }
@@ -151,7 +173,10 @@
 .black .topUp .slider__btn,
 .white .topUp .card_number_name,
 .white .topUp .slider__head,
-.white .topUp .slider__btn {
+.white .topUp .slider__btn,
+.normal .topUp .card_number_name,
+.normal .topUp .slider__head,
+.normal .topUp .slider__btn {
     opacity: 0;
 }
 
@@ -162,7 +187,11 @@
 .white .topUp.slider__card:hover .card_number,
 .white .topUp.slider__card:hover .card_number_name,
 .white .topUp.slider__card:hover .slider__head,
-.white .topUp.slider__card:hover .slider__btn {
+.white .topUp.slider__card:hover .slider__btn,
+.normal .topUp.slider__card:hover .card_number,
+.normal .topUp.slider__card:hover .card_number_name,
+.normal .topUp.slider__card:hover .slider__head,
+.normal .topUp.slider__card:hover .slider__btn {
     transform: translateY(0);
     opacity: 1;
 }

@@ -10,6 +10,10 @@
     border-radius: 10rem;
     position: relative;
 }
+.normal .contact_header {
+    border-radius: 0;
+    background-color: #f9f9ff;
+}
 .width__max {
     display: flex;
     flex-direction: column;
@@ -42,6 +46,10 @@
     background-color: #184d68;
 }
 
+.normal .contact_row {
+    background-color: var(--normal-common-color);
+}
+
 .white .contact_row {
     background-color: #20242d;
 }
@@ -65,6 +73,7 @@
     justify-content: center;
     align-items: flex-start;
 }
+
 .address {
     display: flex;
     justify-content: center;
@@ -92,6 +101,10 @@
 .black .address__icon {
     background-color: #fff;
     color: #184d68;
+}
+.normal .address__icon {
+    background-color: #fff;
+    color: var(--normal-common-color);
 }
 
 .white .address__icon {
@@ -147,7 +160,8 @@
     padding: 4rem 0;
     border-radius: 1rem;
 }
-.black .contact__form {
+.black .contact__form,
+.normal .contact__form {
     background-color: rgba(255, 255, 255, 0.733);
 }
 
@@ -169,6 +183,9 @@
 
 .white .contacts__heading {
     color: #4287e2;
+}
+.normal .contacts__heading {
+    color: var(--normal-common-color);
 }
 .form {
     display: flex;
@@ -211,6 +228,12 @@ textarea {
     color: #166ddf;
 }
 
+.normal .inputBox input,
+.normal textarea {
+    border-bottom: 2px solid var(--normal-contact-bottom);
+    color: var(--normal-second-color);
+}
+
 .inputBox span {
     position: absolute;
     left: 0;
@@ -226,6 +249,9 @@ textarea {
 }
 .white .inputBox span {
     color: #2071dbb4;
+}
+.normal .inputBox span {
+    color: var(--normal-span-color);
 }
 
 .inputBox .design {
@@ -247,6 +273,9 @@ textarea {
 .white .inputBox .design::before {
     background-color: #157aff;
 }
+.normal .inputBox .design::before {
+    background-color: var(--normal-common-color);
+}
 
 .inputBox input:focus ~ .input__name,
 .inputBox textarea:focus ~ .input__name,
@@ -263,6 +292,12 @@ textarea {
 .black .inputBox input:valid ~ .input__name,
 .black .inputBox textarea:valid ~ .input__name {
     color: #184d68;
+}
+.normal .inputBox input:focus ~ .input__name,
+.normal .inputBox textarea:focus ~ .input__name,
+.normal .inputBox input:valid ~ .input__name,
+.normal .inputBox textarea:valid ~ .input__name {
+    color: var(--normal-second-color);
 }
 
 .white .inputBox input:focus ~ .input__name,
@@ -297,6 +332,9 @@ textarea {
 .white .contacts__btn {
     /* background-color: #5cce93; */
     background-color: #4287e2;
+}
+.normal .contacts__btn {
+    background-color: var(--normal-common-color);
 }
 .name__message,
 .email__message {
@@ -342,7 +380,7 @@ textarea {
     padding: 2rem 0;
     margin-top: 3rem;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -399,6 +437,13 @@ textarea {
 .black .comment__div {
     background-color: rgba(255, 255, 255, 0.74);
 }
+.normal .comment__div {
+    background-color: rgba(255, 255, 255, 0.74);
+
+    /* background-color: #fff; */
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--normal-scroll-shadow),
+        -0.1rem -0.1rem 0.3rem var(--normal-scroll-shadow);
+}
 
 .white .comment__div {
     background-color: #649eeb;
@@ -437,6 +482,10 @@ textarea {
 }
 .white .comment__img {
     background-color: #084799;
+    color: #fff;
+}
+.normal .comment__img {
+    background-color: var(--normal-common-color);
     color: #fff;
 }
 .comment__time {
