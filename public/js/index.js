@@ -85,7 +85,7 @@ let totalHeight = document.body.scrollHeight - window.innerHeight / 1.2;
 
 window.onscroll = () => {
     let progressHeight = (window.pageYOffset / totalHeight) * 100;
-    progressbar.style.height = progressHeight + "%";
+    progressbar.style.width = progressHeight + "%";
 
     let top = window.scrollY;
 
@@ -180,7 +180,8 @@ black.addEventListener("click", function () {
     --design-color: #0084f0;
     --tools-color: #226eda;
     --jquery-color: #475e79;
-    --photoshop-color: #035faa;`;
+    --photoshop-color: #035faa;
+    --chose-one-color: #f2f3f7;`;
 
     body.classList.add("black");
     body.classList.remove("white");
@@ -218,7 +219,8 @@ white.addEventListener("click", function () {
     --design-color: #001d34;
     --tools-color: #1254b2;
     --jquery-color: #0b131c;
-    --photoshop-color: #001d34;`;
+    --photoshop-color: #001d34;
+    --chose-one-color: #141F43;`;
 
     body.classList.remove("black");
     body.classList.add("white");
@@ -290,6 +292,7 @@ themeBtn1.addEventListener("click", function () {
     --normal-contact-bottom: #6b59d18f;
     --normal-span-color: #6b59d17c;
     --normal-inactive: #6b59d183;
+    --chose-one-color: #6b59d1;
     `;
 
     themeBtn1.classList.add("action");
@@ -302,6 +305,10 @@ themeBtn1.addEventListener("click", function () {
 });
 
 themeBtn2.addEventListener("click", function () {
+    document.documentElement.style.cssText = `
+    --chose-one-color: #141F43;
+    `;
+
     themeBtn2.classList.add("action");
     themeBtn1.classList.remove("action");
     for__theme2.classList.add("action");
@@ -324,7 +331,8 @@ blueBtn.addEventListener("click", function () {
     --normal-edu-card: #2d72d4e7;
     --normal-contact-bottom: #2d72d486;
     --normal-span-color: #2d72d471;
-    --normal-inactive: #2d72d471;`;
+    --normal-inactive: #2d72d471;
+    --chose-one-color: #2d73d4;`;
 });
 greenBtn.addEventListener("click", function () {
     document.documentElement.style.cssText = ` 
@@ -335,7 +343,8 @@ greenBtn.addEventListener("click", function () {
     --normal-edu-card:#13ae87de;
     --normal-contact-bottom: #13ae879a;
     --normal-span-color: #13ae8779;
-    --normal-inactive: #13ae8779;`;
+    --normal-inactive: #13ae8779;
+    --chose-one-color:  #13ae87;`;
 });
 purpleBtn.addEventListener("click", function () {
     document.documentElement.style.cssText = ` 
@@ -346,5 +355,6 @@ purpleBtn.addEventListener("click", function () {
     --normal-edu-card: #6b59d1e7;
     --normal-contact-bottom: #6b59d18f;
     --normal-span-color: #817d9980;
-    --normal-inactive: #6b59d183;`;
+    --normal-inactive: #6b59d183;
+    --chose-one-color: #6b59d1;`;
 });
