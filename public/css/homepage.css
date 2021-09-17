@@ -18,7 +18,7 @@
 .changing__btns {
     position: absolute;
     top: 6%;
-    right: -14rem;
+    right: -8rem;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -37,72 +37,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30rem;
+    height: 40rem;
     padding: 2rem 0.5rem;
     width: fit-content;
     position: relative;
 }
 
-.theme__div {
-    display: flex;
-    background-color: #0f141e;
-    border-right: 1px groove rgb(143, 140, 140);
-    flex-direction: column;
-    width: fit-content;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 1rem;
-    border-top-left-radius: 1rem;
-}
-
-.theme1,
-.theme2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50%;
-    padding: 1rem;
-    border: 0.2rem solid rgb(143, 140, 140);
-    background-color: #fff;
-    border-radius: 1rem;
-}
-
-.action.theme1,
-.action.theme2 {
-    border: 0.2rem groove #0f141e;
-    background-color: #0f141e;
-}
-
-.theme__name {
-    width: 3rem;
-    height: 3rem;
-    border: 0.5rem groove #0f141e;
-    background-color: #0f141e;
-    color: #eff0f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-weight: var(--third-font);
-    font-size: 1.5rem;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.action .theme__name {
-    background-color: #0f141e;
-    border: 0.5rem groove #eff0f4;
-    color: #eff0f4;
-}
 .chosen__div {
     background-color: #0f141e;
     padding: 1rem;
     width: 6rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-radius: 1rem;
     display: flex;
+    flex-direction: column;
     height: 100%;
     justify-content: space-around;
     align-items: center;
@@ -110,18 +57,18 @@
 
 .for__theme1,
 .for__theme2 {
-    display: none;
-    justify-content: space-around;
-    align-items: center;
-}
-.action.for__theme1,
-.action.for__theme2 {
-    height: 100%;
+    /* display: none; */
+    display: flex;
+    height: 50%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+.for__theme1 {
+    border-bottom: 0.2rem solid #5b5c5f;
 }
 .purpleBtn,
 .greenBtn,
@@ -140,24 +87,32 @@
 }
 .whiteBtn {
     background-color: #eff0f4;
-    border: 0.6rem groove #eff0f4;
+}
+.change__btn__active.whiteBtn {
+    border: 0.6rem solid #5a5b5e;
 }
 .blackBtn {
     background-color: #0f141e;
-    border: 0.6rem groove #eff0f4;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.3),
+        -0.1rem -0.1rem 0.1rem rgba(255, 255, 255, 0.3);
+}
+.change__btn__active.blackBtn {
+    border: 0.6rem solid #eff0f4;
+    box-shadow: none;
 }
 .purpleBtn {
     background-color: #6b59d1;
-    border: 0.6rem groove #eff0f4;
 }
 .greenBtn {
     background-color: #13ae87;
-    background-color: #13ae8779;
-    border: 0.6rem groove #eff0f4;
 }
 .blueBtn {
     background-color: #1254b2;
-    border: 0.6rem groove #eff0f4;
+}
+.change__btn__active.purpleBtn,
+.change__btn__active.greenBtn,
+.change__btn__active.blueBtn {
+    border: 0.6rem solid #eff0f4;
 }
 
 .cog__setting {

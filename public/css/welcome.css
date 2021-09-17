@@ -13,6 +13,10 @@
     transition: 1s;
 }
 
+.black .welcome {
+    background-color: #eff0f4;
+}
+
 /* ====== BLINK DIV ====== */
 
 .blink {
@@ -33,6 +37,12 @@
     border-radius: 50%;
     animation: animate 3s linear infinite;
 }
+
+.black .load {
+    border-top: 2px solid #0f141e;
+    border-bottom: 2px solid #0f141e;
+}
+
 @keyframes animate {
     100% {
         transform: rotate(360deg);
@@ -53,6 +63,10 @@
     color: var(--loader-color);
 }
 
+.black .welcome1 {
+    color: #0f141e;
+}
+
 /* === HEADING 2 === */
 
 .welcome2 {
@@ -61,6 +75,10 @@
     top: 60%;
     transform: translateX(-50%);
     color: var(--loader-color);
+}
+
+.black .welcome2 {
+    color: #0f141e;
 }
 
 /* ========== IN WELCOMING WINDOW ALL SECTION NEEDED TO BE DISPLAY NONE ========== */

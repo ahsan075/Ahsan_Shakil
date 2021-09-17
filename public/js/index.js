@@ -163,6 +163,12 @@ function getDataFromLocalStorage() {
         : [];
 }
 
+function getDataFromLocalStorage2() {
+    return localStorage.getItem("threeBtn")
+        ? JSON.parse(localStorage.getItem("threeBtn"))
+        : [];
+}
+
 function addToLocalStorage() {
     const items = getDataFromLocalStorage();
     localStorage.setItem("PushDiv", JSON.stringify(items));
@@ -173,7 +179,7 @@ function addToLocalStorage() {
 const black = document.querySelector(".blackBtn");
 const white = document.querySelector(".whiteBtn");
 
-black.addEventListener("click", function () {
+function blackStyle() {
     document.documentElement.style.cssText = `--bg-color: #0f141e;
     --text-color: #fff;
     --outer-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
@@ -206,7 +212,10 @@ black.addEventListener("click", function () {
     --jquery-color: #475e79;
     --photoshop-color: #035faa;
     --chose-one-color: #f2f3f7;`;
+}
 
+black.addEventListener("click", function () {
+    blackStyle();
     const items = getDataFromLocalStorage();
     items.name = "black";
     localStorage.setItem("PushDiv", JSON.stringify(items));
@@ -218,7 +227,7 @@ black.addEventListener("click", function () {
     body.classList.remove("normal");
 });
 
-white.addEventListener("click", function () {
+function whiteStyle() {
     document.documentElement.style.cssText = `--bg-color: #eff0f4;
     --text-color: #141f43;
     --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
@@ -249,7 +258,10 @@ white.addEventListener("click", function () {
     --jquery-color: #0b131c;
     --photoshop-color: #001d34;
     --chose-one-color: #141F43;`;
+}
 
+white.addEventListener("click", function () {
+    whiteStyle();
     const items = getDataFromLocalStorage();
     items.name = "white";
     localStorage.setItem("PushDiv", JSON.stringify(items));
@@ -267,12 +279,7 @@ changing__btns.addEventListener("click", function () {
     changing__btns.classList.toggle("newright");
 });
 
-const themeBtn1 = document.querySelector(".theme1");
-const themeBtn2 = document.querySelector(".theme2");
-const for__theme1 = document.querySelector(".for__theme1");
-const for__theme2 = document.querySelector(".for__theme2");
-
-themeBtn1.addEventListener("click", function () {
+function normalAll() {
     document.documentElement.style.cssText = `
     --first-color: #878a8f;
     --second-color: #0f141e;
@@ -326,41 +333,26 @@ themeBtn1.addEventListener("click", function () {
     --normal-inactive: #6b59d183;
     --chose-one-color: #6b59d1;
     `;
-
-    themeBtn1.classList.add("action");
-    themeBtn2.classList.remove("action");
-    for__theme1.classList.add("action");
-    for__theme2.classList.remove("action");
     body.classList.remove("black");
     body.classList.remove("white");
     body.classList.add("normal");
     const items = getDataFromLocalStorage();
     items.name = "normal";
     localStorage.setItem("PushDiv", JSON.stringify(items));
-});
-
-themeBtn2.addEventListener("click", function () {
-    document.documentElement.style.cssText = `
-    --chose-one-color: #141F43;
-    `;
-
-    themeBtn2.classList.add("action");
-    themeBtn1.classList.remove("action");
-    for__theme2.classList.add("action");
-    for__theme1.classList.remove("action");
-    body.classList.remove("black");
-    body.classList.remove("normal");
-    body.classList.add("white");
-    const items = getDataFromLocalStorage();
-    items.name = "white";
-    localStorage.setItem("PushDiv", JSON.stringify(items));
-});
+}
 
 const blueBtn = document.querySelector(".blueBtn ");
 const greenBtn = document.querySelector(".greenBtn ");
 const purpleBtn = document.querySelector(".purpleBtn ");
 
+if (localStorage.threeBtn === undefined) {
+    localStorage.setItem("threeBtn", JSON.stringify({ id: "1", name: "blue" }));
+} else {
+    addToLocalStorage();
+}
+
 blueBtn.addEventListener("click", function () {
+    normalAll();
     document.documentElement.style.cssText = `
     --normal-common-color: #2d73d4;
     --normal-second-color: #1254b2;
@@ -371,8 +363,13 @@ blueBtn.addEventListener("click", function () {
     --normal-span-color: #2d72d471;
     --normal-inactive: #2d72d471;
     --chose-one-color: #2d73d4;`;
+    const items = getDataFromLocalStorage2();
+    items.name = "blue";
+    localStorage.setItem("threeBtn", JSON.stringify(items));
 });
 greenBtn.addEventListener("click", function () {
+    normalAll();
+
     document.documentElement.style.cssText = ` 
     --normal-common-color: #13ae87;
     --normal-second-color: #0e9775;
@@ -383,8 +380,13 @@ greenBtn.addEventListener("click", function () {
     --normal-span-color: #13ae8779;
     --normal-inactive: #13ae8779;
     --chose-one-color:  #13ae87;`;
+    const items = getDataFromLocalStorage2();
+    items.name = "green";
+    localStorage.setItem("threeBtn", JSON.stringify(items));
 });
 purpleBtn.addEventListener("click", function () {
+    normalAll();
+
     document.documentElement.style.cssText = ` 
     --normal-common-color: #6b59d1;
     --normal-second-color: #5648bf;
@@ -395,6 +397,9 @@ purpleBtn.addEventListener("click", function () {
     --normal-span-color: #817d9980;
     --normal-inactive: #6b59d183;
     --chose-one-color: #6b59d1;`;
+    const items = getDataFromLocalStorage2();
+    items.name = "purple";
+    localStorage.setItem("threeBtn", JSON.stringify(items));
 });
 
 let names = JSON.parse(localStorage.PushDiv).name;
@@ -406,76 +411,21 @@ body.classList.remove("black");
 body.classList.add(names);
 
 if (body.classList.contains("black")) {
-    document.documentElement.style.cssText = `--bg-color: #0f141e;
-    --text-color: #fff;
-    --outer-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
-        2px 2px 6px rgba(0, 0, 0, 0.8);
-    --inner-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
-        inset 2px 2px 6px rgba(0, 0, 0, 0.1);
-    --button-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
-        2px 2px 6px rgba(0, 0, 0, 0.8);
-    --button-active: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
-        inset 2px 2px 6px rgba(0, 0, 0, 0.1);
-    --first-font: "Fira Sans", sans-serif;
-    --second-font: "Azeret Mono", monospace;
-    --third-font: "Roboto", sans-serif;
-
-    --logo-color: #fff;
-    --list-bg-color: #f2f3f7;
-
-    --home-anchr-color: #141f43;
-    --home-anchr-hover-color: #04aa6d;
-    --common-color: rgb(209, 203, 203);
-    --toggole-color: #fff;
-    --about-color: #0f141e;
-    --fd-color: #0f141e;
-    --skill-color: #fff;
-    --skill-sub-color: rgb(213, 205, 205);
-    --scrollspy-div-inner: rgb(211, 208, 208);
-    --scrollspy-shadow: var(--button-shadow);
-    --design-color: #0084f0;
-    --tools-color: #226eda;
-    --jquery-color: #475e79;
-    --photoshop-color: #035faa;
-    --chose-one-color: #f2f3f7;`;
+    blackStyle();
 }
 
 if (body.classList.contains("white")) {
-    document.documentElement.style.cssText = `--bg-color: #eff0f4;
-    --text-color: #141f43;
-    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
-    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
-    --button-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-        -2px -2px 12px rgba(255, 255, 255, 0.5),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-        2px 2px 8px rgba(0, 0, 0, 0.15);
-    --button-active: inset -2px -2px 8px rgba(255, 255, 255, 1),
-        inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-        inset 2px 2px 8px rgba(0, 0, 0, 0.15);
-    --logo-color: #0f141e;
-    --list-bg-color: #f2f3f7;
-    --home-anchr-color: #fff;
-    --home-anchr-hover-color: #141f43;
-    --common-color: #878a8f;
-    --toggole-color: #141f43;
-    --about-color: #141f43;
-    --about-sub-color: #878a8f;
-    --fd-color: #141f43;
-    --skill-color: var(--about-color);
-    --skill-sub-color: var(--about-sub-color);
-    --scrollspy-div-inner: rgb(201, 198, 198);
-    --scrollspy-shadow: var(--button-active);
-    --design-color: #001d34;
-    --tools-color: #1254b2;
-    --jquery-color: #0b131c;
-    --photoshop-color: #001d34;
-    --chose-one-color: #141F43;`;
+    whiteStyle();
 }
 
 if (body.classList.contains("white") || body.classList.contains("black")) {
-    themeBtn2.classList.add("action");
-    themeBtn1.classList.remove("action");
-    for__theme2.classList.add("action");
-    for__theme1.classList.remove("action");
+    if (body.classList.contains("white")) {
+        white.classList.add("change__btn__active");
+    }
+    if (body.classList.contains("black")) {
+        black.classList.add("change__btn__active");
+    }
+}
+
+if (body.classList.contains("normal")) {
 }
