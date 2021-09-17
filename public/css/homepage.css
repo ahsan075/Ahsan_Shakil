@@ -25,6 +25,9 @@
     align-items: center;
     transition: 0.3s ease-in-out;
 }
+.black .changing__btns {
+    top: 15%;
+}
 
 .white .change__btn_group,
 .black .change__btn_group {
