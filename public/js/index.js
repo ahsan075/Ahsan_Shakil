@@ -225,6 +225,9 @@ black.addEventListener("click", function () {
     black.classList.add("change__btn__active");
     white.classList.remove("change__btn__active");
     body.classList.remove("normal");
+    purpleBtn.classList.remove("change__btn__active");
+    greenBtn.classList.remove("change__btn__active");
+    blueBtn.classList.remove("change__btn__active");
 });
 
 function whiteStyle() {
@@ -271,6 +274,9 @@ white.addEventListener("click", function () {
     black.classList.remove("change__btn__active");
     white.classList.add("change__btn__active");
     body.classList.remove("normal");
+    purpleBtn.classList.remove("change__btn__active");
+    greenBtn.classList.remove("change__btn__active");
+    blueBtn.classList.remove("change__btn__active");
 });
 
 const changing__btns = document.querySelector(".changing__btns ");
@@ -363,10 +369,16 @@ blueBtn.addEventListener("click", function () {
     --normal-span-color: #2d72d471;
     --normal-inactive: #2d72d471;
     --chose-one-color: #2d73d4;`;
+    purpleBtn.classList.remove("change__btn__active");
+    greenBtn.classList.remove("change__btn__active");
+    blueBtn.classList.add("change__btn__active");
+    black.classList.remove("change__btn__active");
+    white.classList.remove("change__btn__active");
     const items = getDataFromLocalStorage2();
     items.name = "blue";
     localStorage.setItem("threeBtn", JSON.stringify(items));
 });
+
 greenBtn.addEventListener("click", function () {
     normalAll();
 
@@ -380,10 +392,17 @@ greenBtn.addEventListener("click", function () {
     --normal-span-color: #13ae8779;
     --normal-inactive: #13ae8779;
     --chose-one-color:  #13ae87;`;
+    greenBtn.classList.remove("change__btn__active");
+    purpleBtn.classList.remove("change__btn__active");
+    greenBtn.classList.add("change__btn__active");
+    blueBtn.classList.remove("change__btn__active");
+    black.classList.remove("change__btn__active");
+    white.classList.remove("change__btn__active");
     const items = getDataFromLocalStorage2();
     items.name = "green";
     localStorage.setItem("threeBtn", JSON.stringify(items));
 });
+
 purpleBtn.addEventListener("click", function () {
     normalAll();
 
@@ -397,6 +416,11 @@ purpleBtn.addEventListener("click", function () {
     --normal-span-color: #817d9980;
     --normal-inactive: #6b59d183;
     --chose-one-color: #6b59d1;`;
+    purpleBtn.classList.add("change__btn__active");
+    greenBtn.classList.remove("change__btn__active");
+    blueBtn.classList.remove("change__btn__active");
+    black.classList.remove("change__btn__active");
+    white.classList.remove("change__btn__active");
     const items = getDataFromLocalStorage2();
     items.name = "purple";
     localStorage.setItem("threeBtn", JSON.stringify(items));
@@ -404,6 +428,9 @@ purpleBtn.addEventListener("click", function () {
 
 let names = JSON.parse(localStorage.PushDiv).name;
 console.log(names);
+
+let colors = JSON.parse(localStorage.threeBtn).name;
+console.log(colors);
 
 body.classList.remove("white");
 body.classList.remove("normal");
@@ -428,4 +455,52 @@ if (body.classList.contains("white") || body.classList.contains("black")) {
 }
 
 if (body.classList.contains("normal")) {
+    body.classList.remove("blue");
+    body.classList.remove("green");
+    body.classList.remove("purple");
+    body.classList.add(colors);
+
+    if (body.classList.contains("blue")) {
+        document.documentElement.style.cssText = `
+        --normal-common-color: #2d73d4;
+        --normal-second-color: #1254b2;
+        --normal-scroll-shadow: #2d72d4a8;
+        --normal-detail-card: #2d72d4e7;
+        --normal-edu-card: #2d72d4e7;
+        --normal-contact-bottom: #2d72d486;
+        --normal-span-color: #2d72d471;
+        --normal-inactive: #2d72d471;
+        --chose-one-color: #2d73d4;`;
+        blueBtn.classList.add("change__btn__active");
+    }
+    if (body.classList.contains("green")) {
+        document.documentElement.style.cssText = ` 
+        --normal-common-color: #13ae87;
+        --normal-second-color: #0e9775;
+        --normal-scroll-shadow: #13ae87a6;
+        --normal-detail-card: #13ae87de;
+        --normal-edu-card:#13ae87de;
+        --normal-contact-bottom: #13ae879a;
+        --normal-span-color: #13ae8779;
+        --normal-inactive: #13ae8779;
+        --chose-one-color:  #13ae87;`;
+        greenBtn.classList.add("change__btn__active");
+    }
+    if (body.classList.contains("purple")) {
+        document.documentElement.style.cssText = ` 
+        --normal-common-color: #6b59d1;
+        --normal-second-color: #5648bf;
+        --normal-scroll-shadow: #6b59d181;
+        --normal-detail-card: #6b59d1e7;
+        --normal-edu-card: #6b59d1e7;
+        --normal-contact-bottom: #6b59d18f;
+        --normal-span-color: #817d9980;
+        --normal-inactive: #6b59d183;
+        --chose-one-color: #6b59d1;`;
+        purpleBtn.classList.add("change__btn__active");
+    }
+} else {
+    body.classList.remove("blue");
+    body.classList.remove("green");
+    body.classList.remove("purple");
 }
