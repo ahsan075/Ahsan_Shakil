@@ -602,6 +602,12 @@ html {
     .normal #progressbar {
         bottom: 8vh;
     }
+    .none #scrollPath {
+        background-color: transparent;
+    }
+    .none #progressbar {
+        background-color: transparent;
+    }
 
     .black .mobile__expend .circle__name {
         border: 3px solid #0f141e;
@@ -660,6 +666,9 @@ html {
     }
     .normal .scroll__active.contain {
         background-color: #f9f9ff;
+    }
+    .none .scroll__active.contain {
+        background-color: transparent;
     }
     .normal .mobile__expend .navbar {
         bottom: 0;
