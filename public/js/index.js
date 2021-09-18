@@ -352,7 +352,10 @@ const greenBtn = document.querySelector(".greenBtn ");
 const purpleBtn = document.querySelector(".purpleBtn ");
 
 if (localStorage.threeBtn === undefined) {
-    localStorage.setItem("threeBtn", JSON.stringify({ id: "1", name: "blue" }));
+    localStorage.setItem(
+        "threeBtn",
+        JSON.stringify({ id: "1", name: "purple" })
+    );
 } else {
     addToLocalStorage();
 }
