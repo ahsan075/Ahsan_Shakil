@@ -98,6 +98,10 @@ window.onscroll = () => {
                 list.parentElement.classList.add("bar__active");
             }
         });
+    } else {
+        scrollspy__div.forEach((list) => {
+            list.parentElement.classList.remove("bar__active");
+        });
     }
 
     section.forEach((section) => {
