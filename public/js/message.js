@@ -136,14 +136,104 @@ function Template(allData) {
             <div class="time__delay">${newTimeDiff} ${timeName} ago</div>
             </div>   
         </div>
-        <div class="comment_right"><i class="fas fa-ellipsis-v"></i></div>
+
+        <div class='emojiselect'></div>
+
+        <div class="comment_right"><i class="fas fa-ellipsis-v"></i> 
+            <div class='emojiChose'></div>
+
+            <div class='replyOpen'>
+            
+            <div class='emojiDiv'><i class="far fa-smile"></i></div>
+
+            <div class='replyDiv'><i class="fas fa-comment-dots"></i></div>
+            
+            </div>
+        
+        </div>
         </div>
         <div class="comment__msg">
            ${item.message}
         </div>
        
-        </div> `;
+        </div>
+         `;
     });
     template = template.join("");
     comments.innerHTML = template;
+    const replyClick = document.querySelectorAll(".fa-ellipsis-v");
+    const replyDiv = document.querySelectorAll(".replyOpen");
+    replyClick.forEach((rc) => {
+        rc.addEventListener("click", function (e) {
+            const chosing = e.target.parentElement.lastElementChild;
+
+            if (chosing.classList.contains("replyOpen")) {
+                chosing.classList.toggle("action");
+            }
+        });
+    });
+    // const emojis = [
+    //     `fas fa-biking`,
+    //     `far fa-surprise`,
+    //     `far fa-smile-beam`,
+    //     `far fa-meh-rolling-eyes`,
+    //     `far fa-tired`,
+    //     `far fa-laugh-beam`,
+    //     `far fa-kiss-wink-heart`,
+    //     `far fa-grin-tears`,
+    //     `far fa-grin-hearts`,
+    //     `fas fa-heart`,
+    //     `fas fa-thumbs-up`,
+    // ];
+    // const emojiPush = document.querySelectorAll(".emojiChose");
+    // const emojiDiv = document.querySelectorAll(".emojiDiv");
+    // emojis.forEach((emj) => {
+    //     let temp = `<i class='${emj}'></i>`;
+
+    //     emojiPush.forEach((ep) => {
+    //         ep.insertAdjacentHTML("afterBegin", temp);
+    //     });
+    // });
+
+    // emojiDiv.forEach((ed) => {
+    //     ed.addEventListener("click", function (e) {
+    //         const chosing =
+    //             e.target.parentElement.parentElement.previousElementSibling;
+
+    //         if (chosing.classList.contains("emojiChose"))
+    //             chosing.classList.toggle("action");
+    //     });
+    // });
+
+    // const emojiselect = document.querySelectorAll(".emojiChose i");
+    // const emojiselectDiv = document.querySelectorAll(".emojiselect i");
+    // emojiselect.forEach((es) => {
+    //     es.addEventListener("click", function (e) {
+    //         const target = e.target;
+    //         const clonttrgt = target.cloneNode(true);
+
+    //         const divwb =
+    //             target.parentElement.parentElement.previousElementSibling;
+    //         const atArr = [...divwb.children];
+    //         let neArr = [];
+    //         atArr.forEach((aa) => {
+    //             neArr.push(aa.className);
+    //         });
+
+    //         if (divwb.classList.contains("emojiselect")) {
+    //             var count = 0;
+    //             if (neArr.includes(clonttrgt.className)) {
+    //                 const tgc = document.querySelector(
+    //                     `.${clonttrgt.className.slice(4)}`
+    //                 );
+    //                 const pop = `<p>me<p>`;
+    //                 tgc.insertAdjacentHTML("beforeBegin", pop);
+
+    //                 console.log(count++);
+    //             } else {
+    //                 divwb.appendChild(clonttrgt);
+    //             }
+    //         }
+    //     });
+    // });
 }

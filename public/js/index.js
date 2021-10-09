@@ -268,7 +268,38 @@ function whiteStyle() {
 }
 
 white.addEventListener("click", function () {
-    whiteStyle();
+    document.documentElement.style.cssText = `
+    --bg-color: #eff0f4;
+    --text-color: #141f43;
+    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+    --button-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+        -2px -2px 12px rgba(255, 255, 255, 0.5),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+        2px 2px 8px rgba(0, 0, 0, 0.15);
+    --button-active: inset -2px -2px 8px rgba(255, 255, 255, 1),
+        inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+        inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+    --logo-color: #0f141e;
+    --list-bg-color: #f2f3f7;
+    --home-anchr-color: #fff;
+    --home-anchr-hover-color: #141f43;
+    --common-color: #878a8f;
+    --toggole-color: #141f43;
+    --about-color: #141f43;
+    --about-sub-color: #878a8f;
+    --fd-color: #141f43;
+    --skill-color: var(--about-color);
+    --skill-sub-color: var(--about-sub-color);
+    --scrollspy-div-inner: rgb(201, 198, 198);
+    --scrollspy-shadow: var(--button-active);
+    --design-color: #001d34;
+    --tools-color: #1254b2;
+    --jquery-color: #0b131c;
+    --photoshop-color: #001d34;
+    --chose-one-color: #141F43;`;
+    // whiteStyle();
     const items = getDataFromLocalStorage();
     items.name = "white";
     localStorage.setItem("PushDiv", JSON.stringify(items));

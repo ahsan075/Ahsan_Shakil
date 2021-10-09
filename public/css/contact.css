@@ -410,7 +410,7 @@ textarea {
     width: 60%;
     margin: auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -423,16 +423,17 @@ textarea {
     justify-content: space-between;
     align-items: flex-start;
     /* margin: auto; */
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
     /* margin: 1rem 2rem; */
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
+    position: relative;
 }
 .comment__div:first-child {
-    margin-bottom: 0;
+    margin-top: 0;
 }
 .comment__div:last-child {
-    margin-top: 0;
+    margin-bottom: 0;
 }
 .black .comment__div {
     background-color: rgba(255, 255, 255, 0.74);
@@ -512,6 +513,9 @@ textarea {
     cursor: pointer;
     padding: 1rem;
 }
+.comment_right > i {
+    padding: 0.5rem 1rem;
+}
 
 .comment__msg {
     width: 100%;
@@ -533,6 +537,101 @@ textarea {
 .white .comment_right,
 .white .comment__msg {
     color: #fff;
+}
+
+.replyOpen {
+    position: absolute;
+    right: -5rem;
+    top: 2rem;
+    background-color: #fff;
+    border: 2px solid #20242d;
+    width: 4rem;
+    height: 6rem;
+    border-radius: 1rem;
+    transform: scale(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.normal .replyOpen {
+    border: 2px solid var(--normal-common-color);
+}
+.white .replyOpen {
+    border: 2px solid #649eeb;
+}
+
+.replyOpen i {
+    font-size: 1.8rem;
+}
+.normal .replyOpen i {
+    color: var(--normal-common-color);
+}
+.white .replyOpen i {
+    color: #084799;
+}
+
+.action.replyOpen {
+    transform: scale(1);
+}
+
+.emojiChose {
+    border: 2px solid var(--normal-common-color);
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 1rem;
+    right: 1rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
+}
+.emojiselect {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: -1.5rem;
+    right: 1rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+}
+.emojiselect i {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.4rem;
+    color: var(--normal-common-color);
+    font-size: 2rem;
+}
+
+.action.emojiChose {
+    transform: scale(1);
+}
+
+.emojiChose i {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--normal-common-color);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.2rem;
+    color: var(--normal-common-color);
+    font-size: 1.8rem;
 }
 
 @media only screen and (min-width: 1401px) {
